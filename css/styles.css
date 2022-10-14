@@ -6,6 +6,7 @@
     --color-pouring: #f5f4fA;
     --color-text-light: #fff;
     --color-logo: #000;
+    --color-img:#afb1b8;
 }
 
 body{
@@ -16,6 +17,7 @@ body{
 ul{
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 h1,   h2,   h3,   h4,   h5,   h6,   p {    margin: 0;   }
@@ -104,17 +106,24 @@ img{
 
 .contacts-link{
     color: var(--color-secondary);
+    fill: var(--color-secondary);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 32px 0;
 }
 
 .contacts-link:hover, .contacts-link:focus{
     color: var(--color-brand);
+    fill: var(--color-brand);
+}
+
+.contacts-icon{
+    margin-right: 10px;
 }
 
 
@@ -128,8 +137,16 @@ img{
 
 .hero{
     padding: 200px 0;
+    max-width: 1600px;
+    height: 600px;
     background-color: var(--color-background);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)),
+       url(../images/background-image.jpg);
+    margin: 0 auto;
 }
+
 
 .hero-title{
     width: 696px;
@@ -178,6 +195,17 @@ img{
 
 .benefits-item:not(:last-child){
     margin-right: 30px;
+}
+
+.benefits-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background: var(--color-pouring);
 }
 
 .benefits-title{
@@ -270,13 +298,75 @@ img{
     color: var(--color-secondary);
 }
 
+.social-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.team-social-link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-text-light);
+    border-radius: 50%;
+    fill: var(--color-img);
+}
+
+.team-social-link:hover, .team-social-link:focus{
+    background-color: var(--color-brand);
+    fill: var(--color-text-light);
+}
+
+
+
+/* clients */
+
+
+.clients-title{
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em; 
+}
+
+.clients-list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients-link{
+    width: 170px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid var(--color-img);
+    margin-top: 16px;
+    fill: var(--color-img);
+}
+
+.clients-link:hover, .clients-link:focus{
+    fill: var(--color-brand);
+    border: 1px solid var(--color-brand);
+}
 
 /* footer */
 
 
 .footer{
     padding: 60px  0;
-    background-color: var(--color-background)
+    background-color: var(--color-background);
+}
+
+.footer-container{
+    display: flex;
 }
 
 .footer-link-logo{
@@ -326,6 +416,41 @@ img{
     color: var(--color-brand)
 }
  
+.social-footer{
+    margin-left: 70px;
+    margin-top: 12px;
+}
+
+.social-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.social-list-footer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-link-footer{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    fill: var(--color-text-light);
+}
+
+.social-link-footer:hover, .social-link-footer:focus{
+    background-color: var(--color-brand)
+}
 
 
 /* ==Portfolio== */
@@ -362,7 +487,7 @@ img{
 .filter-button:hover, .filter-button:focus{
     background-color: var(--color-brand);
     color: var(--color-text-light);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -394,7 +519,8 @@ img{
 }
 
 .project-link:hover, .project-link:focus{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-img{
